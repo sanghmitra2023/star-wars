@@ -7,10 +7,10 @@ const PlanetsCard = (props) => {
   const { store, actions } = useContext(Context);
 
   return (
-    <div className="card bg bg-secondary" style={{ width: "18rem" }}>
+    <div className="card" style={{ width: "18rem" }}>
       <img
         src={`https://starwars-visualguide.com/assets/img/planets/${
-          props.id + 1
+          props.id + 2
         }.jpg`}
         className="card-img-top"
         alt="..."
@@ -23,7 +23,7 @@ const PlanetsCard = (props) => {
         <p className="card-text">Climate: {props.planet.climate}</p>
         <div className="buttonContainer">
           <Link to={"/planets/" + props.id}>
-            <button href="#" className="btn btn-danger">
+            <button href="#" className="btn btn-outline-primary">
               Learn More
             </button>
           </Link>
@@ -37,7 +37,7 @@ const PlanetsCard = (props) => {
               }
             }}>
             <div style={{ marginLeft: "10px" }}>
-              <i className="fa-solid fa-star" style={{ color: "#ffd43b" }}></i>
+              <i className="fa fa-heart text-danger"></i>
             </div>
           </button>
         </div>

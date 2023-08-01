@@ -5,11 +5,8 @@
   
   .favorites {
     border-radius: 12px;
-    border-color: rgb(202, 174, 102);
+    border-color: black;
     margin-left: auto;
-    text-align: end;
-    align-items: center;
-    justify-content: center;
     padding-right: 1rem;
     display: flex;
   }

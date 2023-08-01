@@ -7,9 +7,11 @@ import { Link } from "react-router-dom";
 const VehiclesCard = (props) => {
   const { store, actions } = useContext(Context);
   return (
-    <div className="card bg bg-secondary">
+    <div className="card">
       <img
-        src={`https://starwars-visualguide.com/assets/img/vehicles/6.jpg`}
+        src={`https://starwars-visualguide.com/assets/img/vehicles/${
+          props.id + 2
+        }.jpg`}
         className="card-img-top"
         alt="Should be a StarShip Image"
         style={{ width: "350px", height: "auto", borderRadius: "5px" }}
@@ -23,7 +25,7 @@ const VehiclesCard = (props) => {
         <p className="card-text">Manufacturer: {props.vehicle.manufacturer}</p>
         <div className="buttonContainer">
           <Link to={"/vehicles/" + props.id}>
-            <button href="#" className="btn btn-danger">
+            <button href="#" className="btn btn-outline-primary">
               Learn More
             </button>
           </Link>
@@ -37,7 +39,7 @@ const VehiclesCard = (props) => {
               }
             }}>
             <div style={{ marginLeft: "10px" }}>
-              <i className="fa-solid fa-star" style={{ color: "#ffd43b" }}></i>
+              <i className="fa fa-heart text-danger"></i>
             </div>
           </button>
         </div>

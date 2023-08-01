@@ -8,7 +8,7 @@ const CharacterCard = (props) => {
   const { store, actions } = useContext(Context);
 
   return (
-    <div className="card bg bg-secondary cardNumber1">
+    <div className="card cardNumber1">
       <img
         src={`https://starwars-visualguide.com/assets/img/characters/${
           props.id + 1
@@ -24,7 +24,7 @@ const CharacterCard = (props) => {
         <p className="card-text">Gender: {props.item.gender}</p>
         <div className="buttonContainer">
           <Link to={"/people/" + props.id}>
-            <button href="#" className="btn btn-danger">
+            <button href="#" className="btn btn-outline-primary">
               Learn More
             </button>
           </Link>
@@ -38,7 +38,7 @@ const CharacterCard = (props) => {
               }
             }}>
             <div style={{ marginLeft: "10px" }}>
-              <i className="fa-solid fa-star" style={{ color: "#ffd43b" }}></i>
+              <i className="fa fa-heart text-danger"></i>
             </div>
           </button>
         </div>

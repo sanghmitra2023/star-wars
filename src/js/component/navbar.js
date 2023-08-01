@@ -3,27 +3,17 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import "../../styles/navbar.css";
-import SearchBar from "./SearchBar";
+
 
 export const Navbar = (props) => {
   const { store, actions } = useContext(Context);
   const [showHover, setShowHover] = useState(-1);
 
   return (
-    // STARTING IMAGE LOGO SENDING HOME ON CLICK
-    <nav className="navbar navbar-light bg-secondary mb-3">
-      <Link to="/">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Star_wars2.svg/1200px-Star_wars2.svg.png"
-          className="navbar-brand mb-0 h1 starwars"
-        />
-      </Link>
-
-      {/* SEARCH BAR */}
-
-      <SearchBar item={store.people} />
-
-      {/* FAVORITES DROPDOWN LIST */}
+    <nav className="navbar navbar-light bg-light mb-3" style={{backgroundColor:"white"}}>
+        <Link to="/">
+          <img src={"https://w7.pngwing.com/pngs/4/136/png-transparent-star-wars-anakin-skywalker-logo-star-wars-text-number-desktop-wallpaper.png"} alt="Star Wars" style={{maxHeight:100, maxWidth:100}}/>
+        </Link>
 
       <div className="dropdown ml-auto">
         <button
@@ -31,11 +21,11 @@ export const Navbar = (props) => {
           type="button"
           data-bs-toggle="dropdown"
           aria-expanded="false">
-          <span className="me-5 ">Favorites</span>
+          <h5>Favorites</h5>
           <div
-            className="bg bg-secondary  me-4 "
+            className="bg bg-warning "
             style={{
-              width: "40px",
+              width: "30px",
               textAlign: "center",
               borderRadius: "15px",
             }}>
@@ -50,7 +40,7 @@ export const Navbar = (props) => {
               return (
                 <div>
                   <li
-                    className="dropdown-item d-flex fst-italic fw-bold"
+                    className="dropdown-item d-flex fw-bold"
                     key={index}
                     onMouseEnter={() => setShowHover(index)}
                     onMouseLeave={() => setShowHover(-1)}>
@@ -66,7 +56,7 @@ export const Navbar = (props) => {
                         type="button">
                         {showHover == index ? (
                           <div style={{ width: "40px", textAlign: "center" }}>
-                            <i class="fa-solid fa-trash"></i>
+                            <i class="fa fa-times"></i>
                           </div>
                         ) : (
                           ""

@@ -31,9 +31,7 @@ export const PeopleView = () => {
                 }
               }}>
               <div style={{ marginLeft: "10px" }}>
-                <i
-                  className="fa-solid fa-star"
-                  style={{ color: "#ffd43b" }}></i>
+              <i className="fa fa-heart text-danger"></i>
               </div>
             </button>
           </div>
@@ -106,9 +104,7 @@ export const PlanetsView = () => {
                 }
               }}>
               <div style={{ marginLeft: "10px" }}>
-                <i
-                  className="fa-solid fa-star"
-                  style={{ color: "#ffd43b" }}></i>
+              <i className="fa fa-heart text-danger"></i>
               </div>
             </button>
           </div>
@@ -179,9 +175,7 @@ export const VehiclesView = () => {
                 }
               }}>
               <div style={{ marginLeft: "10px" }}>
-                <i
-                  className="fa-solid fa-star"
-                  style={{ color: "#ffd43b" }}></i>
+                <i className="fa fa-heart text-danger"></i>
               </div>
             </button>
           </div>
